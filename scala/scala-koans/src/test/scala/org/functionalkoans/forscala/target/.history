@@ -1,0 +1,3 @@
+~test-only org.functionalkoans.forscala.AboutAsserts
+test:compile
+exit

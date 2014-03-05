@@ -1,0 +1,4 @@
+scala/koans/target
+scala/koans/project/build/target/
+scala/koans/project/boot/sbt.boot.lock
+scala/koans/project/boot/update.log
