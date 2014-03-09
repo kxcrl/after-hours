@@ -1,4 +1,4 @@
-defmodule Storyteller.Dynamo do
+defmodule Streamer.Dynamo do
   use Dynamo
 
   config :dynamo,
@@ -6,7 +6,7 @@ defmodule Storyteller.Dynamo do
     env: Mix.env,
 
     # The OTP application associated with this Dynamo
-    otp_app: :storyteller,
+    otp_app: :streamer,
 
     # The endpoint to dispatch requests to
     endpoint: ApplicationRouter,
@@ -19,8 +19,8 @@ defmodule Storyteller.Dynamo do
   # config :dynamo,
   #   session_store: Session.CookieStore,
   #   session_options:
-  #     [ key: "_storyteller_session",
-  #       secret: "hx7Yit+bq4EiMpaDc4oiU06ukBpESHHYmwxDc5w9NibneIaIDN/LaWBMFaq6psfg"]
+  #     [ key: "_streamer_session",
+  #       secret: "YT+Eu+L6zelIViYCkmB/OmWWcWiTi6451Ag7ZyCsUZ4koenCyU/yfViYY8I9qipr"]
 
   # Default functionality available in templates
   templates do

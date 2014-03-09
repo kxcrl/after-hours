@@ -1,5 +1,5 @@
 defmodule ApplicationRouterTest do
-  use Storyteller.TestCase
+  use Streamer.TestCase
   use Dynamo.HTTP.Case
 
   # Sometimes it may be convenient to test a specific

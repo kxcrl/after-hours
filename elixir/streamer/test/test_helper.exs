@@ -1,8 +1,8 @@
-Dynamo.under_test(Storyteller.Dynamo)
+Dynamo.under_test(Streamer.Dynamo)
 Dynamo.Loader.enable
 ExUnit.start
 
-defmodule Storyteller.TestCase do
+defmodule Streamer.TestCase do
   use ExUnit.CaseTemplate
 
   # Enable code reloading on test cases

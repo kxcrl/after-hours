@@ -1,11 +1,11 @@
-defmodule Storyteller.Mixfile do
+defmodule Streamer.Mixfile do
   use Mix.Project
 
   def project do
-    [ app: :storyteller,
+    [ app: :streamer,
       version: "0.0.1",
       build_per_environment: true,
-      dynamos: [Storyteller.Dynamo],
+      dynamos: [Streamer.Dynamo],
       compilers: [:elixir, :dynamo, :app],
       deps: deps ]
   end
@@ -13,7 +13,7 @@ defmodule Storyteller.Mixfile do
   # Configuration for the OTP application
   def application do
     [ applications: [:cowboy, :dynamo],
-      mod: { Storyteller, [] } ]
+      mod: { Streamer, [] } ]
   end
 
   defp deps do
