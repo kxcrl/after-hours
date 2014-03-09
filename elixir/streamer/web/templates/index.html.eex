@@ -5,6 +5,14 @@
   <link rel="shortcut icon" href="/static/favicon.ico" />
 </head>
 <body>
+  <script>
+    // 'stream' is our URL as defined in the router.
+    var source = new EventSource('stream');
+    source.addEventListener('message', function(e) {
+      // e.data contains the random numbers (without the "data: ")
+      console.log(e.data);
+    }, false);
+  </script>
   <h3>Welcome to Dynamo!</h3>
   <ol>
     <li>Change this template at <code>web/templates/index.html.eex</code></li>
