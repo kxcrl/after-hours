@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 
-
 int main() {
   /* char firstName[256]; */
   /* char lastName[256]; */
@@ -20,8 +19,8 @@ int main() {
   }
   name[char_count] = '\0';
 
-  if(strcmp(name, "exit\n")){
-    return(0);
+  if(strcmp(name, "exit") == 0){
+    return 0;
   }
 
   puts("How old are you?");
