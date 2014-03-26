@@ -20,6 +20,10 @@ int main() {
   }
   name[char_count] = '\0';
 
+  if(strcmp(name, "exit\n")){
+    return(0);
+  }
+
   puts("How old are you?");
   scanf("%d", &age);
 
