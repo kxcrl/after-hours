@@ -1,25 +1,30 @@
 #include <stdio.h>
 #include <string.h>
 
-char ch;
-char name[80];
-int char_count;
 int age;
 int id;
 
-void get_name(){
+char * get_input(){
+  char ch;
+  static char input[80];
+  int char_count;
+
   ch = getchar();
   char_count = 0;
   while( (ch != '\n') && (char_count < 80)) {
-    name[char_count++] = ch;
+    input[char_count++] = ch;
     ch = getchar();
   }
-  name[char_count] = '\0';
+  input[char_count] = '\0';
+
+  return input;
 }
 
 int main() {
+  char *name;
+
   puts("What is your name?");
-  get_name();
+  name = get_input();
 
   if(strcmp(name, "exit") == 0){
     return 0;
