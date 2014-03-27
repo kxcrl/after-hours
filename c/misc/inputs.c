@@ -30,14 +30,22 @@ int main() {
   int age;
   int id;
 
+  puts("");
+  puts("Welcome to the program!");
+  puts("Let's learn a little bit about you.");
+  puts("You can exit at anytime by entering 'exit' at the prompt.");
+
+  puts("");
   puts("What is your name?");
   input = get_input();
   strcpy(name, input);
 
+  puts("");
   puts("What is your friend's name?");
   input = get_input();
   strcpy(friend, input);
 
+  puts("");
   puts("How old are you?");
   input = get_input();
   while(atoi(input) == 0){
@@ -46,10 +54,16 @@ int main() {
   }
   age = atoi(input);
 
-  puts("What ID would you like?");
-  puts("Please choose 5 numbers.");
-  scanf("%d", &id);
+  puts("");
+  puts("What ID would you like? (Choose up to 5 numbers)");
+  input = get_input();
+  while(atoi(input) == 0 || atoi(input) > 99999){
+    puts("Please choose up to 5 numbers for your ID.");
+    input = get_input();
+  }
+  id = atoi(input);
 
+  puts("");
   printf("You are %s.\n", name);
   printf("Your friend is %s.\n", friend);
   printf("You are %d years old, and next year you will be %d.\n", age, age+1);
