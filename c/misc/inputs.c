@@ -1,16 +1,13 @@
 #include <stdio.h>
 #include <string.h>
 
-int main() {
-  /* char firstName[256]; */
-  /* char lastName[256]; */
-  char ch;
-  char name[80];
-  int char_count;
-  int age;
-  int id;
+char ch;
+char name[80];
+int char_count;
+int age;
+int id;
 
-  puts("What is your name?");
+void get_name(){
   ch = getchar();
   char_count = 0;
   while( (ch != '\n') && (char_count < 80)) {
@@ -18,6 +15,11 @@ int main() {
     ch = getchar();
   }
   name[char_count] = '\0';
+}
+
+int main() {
+  puts("What is your name?");
+  get_name();
 
   if(strcmp(name, "exit") == 0){
     return 0;
