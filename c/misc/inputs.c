@@ -3,9 +3,6 @@
 #include <string.h>
 #define INPUTBUFFER 80
 
-int age;
-int id;
-
 char * get_input(){
   char ch;
   static char input[INPUTBUFFER];
@@ -30,6 +27,8 @@ int main() {
   char *input;
   char name[INPUTBUFFER];
   char friend[INPUTBUFFER];
+  int age;
+  int id;
 
   puts("What is your name?");
   input = get_input();
@@ -40,7 +39,12 @@ int main() {
   strcpy(friend, input);
 
   puts("How old are you?");
-  scanf("%d", &age);
+  input = get_input();
+  while(atoi(input) == 0){
+    puts("Please enter a number (1 or greater) for your age.");
+    input = get_input();
+  }
+  age = atoi(input);
 
   puts("What ID would you like?");
   puts("Please choose 5 numbers.");
